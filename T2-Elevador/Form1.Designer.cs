@@ -58,14 +58,12 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.button16 = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -360,19 +358,11 @@
             this.textBox8.TabIndex = 7;
             this.textBox8.Text = "Térreo";
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(161, 269);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(46, 20);
-            this.numericUpDown1.TabIndex = 7;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 437);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
@@ -398,7 +388,6 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,7 +425,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 
