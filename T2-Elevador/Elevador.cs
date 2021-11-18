@@ -41,10 +41,10 @@ namespace T2_Elevador
                     do
                     {
                         tempoMovimento();
-                        ++andarAtual;
+                        --andarAtual;
                         Parallel.Invoke(new Action(AtualizarAndar));
 
-                    } while (andarAtual < andarObjetivo);
+                    } while (andarAtual > andarObjetivo);
                 }
             }
         }
@@ -56,7 +56,7 @@ namespace T2_Elevador
 
         public void tempoMovimento()
         {
-            var milliseconds = 3000;
+            var milliseconds = 1000;
             Thread.Sleep(milliseconds);
         }
     }
