@@ -60,6 +60,7 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -147,7 +148,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(20, 12);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 13);
+            this.textBox1.Size = new System.Drawing.Size(166, 25);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "Painel de navegação interno";
             // 
@@ -182,20 +183,24 @@
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(294, 61);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(61, 17);
+            this.checkBox1.Size = new System.Drawing.Size(74, 27);
             this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "Manual";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox1.Click += new System.EventHandler(this.checkBox1_Click);
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(361, 61);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(79, 17);
+            this.checkBox2.Size = new System.Drawing.Size(92, 27);
             this.checkBox2.TabIndex = 4;
             this.checkBox2.Text = "Automático";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.checkBox2.Click += new System.EventHandler(this.checkBox2_Click);
             // 
             // textBox3
             // 
@@ -376,7 +381,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(97, 266);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 27);
+            this.label1.Size = new System.Drawing.Size(45, 50);
             this.label1.TabIndex = 7;
             this.label1.Text = "0";
             // 
@@ -386,10 +391,18 @@
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(52, 243);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(127, 21);
+            this.textBox9.Size = new System.Drawing.Size(127, 35);
             this.textBox9.TabIndex = 8;
             this.textBox9.Text = "Andar atual";
             this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.WorkerReportsProgress = true;
+            this.backgroundWorker1.WorkerSupportsCancellation = true;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork_1);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted_1);
             // 
             // Form1
             // 
@@ -462,6 +475,7 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox9;
+        public System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
