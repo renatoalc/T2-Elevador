@@ -41,17 +41,35 @@ namespace T2_Elevador
 
         }
 
+        private void testeThread()
+        {
+            elevador.andarObjetivo = 2;
+            elevador.mexerElevador();
+            label1.Text = elevador.andarAtual.ToString();
+        }
+
         private void botao0_Click(object sender, EventArgs e)
         {
+            Limpar();
+            botao0.BackColor = Color.Yellow;
             elevador.andarObjetivo = 0;
             elevador.mexerElevador();
         }
 
-
+        private void Limpar()
+        {
+            botao0.BackColor = Color.White;
+            botao1.BackColor = Color.White;
+            botao2.BackColor = Color.White;
+            botao3.BackColor = Color.White;
+            botao4.BackColor = Color.White;
+        }
 
 
         private void botao1_Click(object sender, EventArgs e)
         {
+            Limpar();
+            botao1.BackColor = Color.Yellow;
             elevador.andarObjetivo = 1;
             elevador.mexerElevador();
             label1.Text = elevador.andarAtual.ToString();
@@ -59,13 +77,16 @@ namespace T2_Elevador
 
         private void botao2_Click(object sender, EventArgs e)
         {
-            elevador.andarObjetivo = 2;
-            elevador.mexerElevador();
-            label1.Text = elevador.andarAtual.ToString();
+            Limpar();
+            botao2.BackColor = Color.BlueViolet;
+            Thread trd = new Thread(new ThreadStart(this.testeThread));
+            trd.Start();
         }
 
         private void botao3_Click(object sender, EventArgs e)
         {
+            Limpar();
+            botao3.BackColor = Color.BlueViolet;
             elevador.andarObjetivo = 3;
             elevador.mexerElevador();
             label1.Text = elevador.andarAtual.ToString();
@@ -73,9 +94,12 @@ namespace T2_Elevador
 
         private void botao4_Click(object sender, EventArgs e)
         {
+            Limpar();
+            botao4.BackColor = Color.Yellow;
             elevador.andarObjetivo = 4;
             elevador.mexerElevador();
             label1.Text = elevador.andarAtual.ToString();
         }
+
     }
 }

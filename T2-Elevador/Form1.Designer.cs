@@ -59,6 +59,7 @@
             this.button16 = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -117,7 +118,7 @@
             // 
             // botao0
             // 
-            this.botao0.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.botao0.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.botao0.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botao0.Location = new System.Drawing.Point(81, 113);
             this.botao0.Name = "botao0";
@@ -369,20 +370,33 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label1.BackColor = System.Drawing.Color.DarkGray;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(104, 267);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(97, 266);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 25);
+            this.label1.Size = new System.Drawing.Size(26, 27);
             this.label1.TabIndex = 7;
             this.label1.Text = "0";
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(52, 243);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(127, 21);
+            this.textBox9.TabIndex = 8;
+            this.textBox9.Text = "Andar atual";
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 428);
+            this.Controls.Add(this.textBox9);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
@@ -447,6 +461,7 @@
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox9;
     }
 }
 

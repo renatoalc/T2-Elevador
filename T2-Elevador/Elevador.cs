@@ -30,7 +30,7 @@ namespace T2_Elevador
                     {
                         tempoMovimento();
                         ++andarAtual;
-                        Parallel.Invoke(new Action(AtualizarAndar));
+                        //Parallel.Invoke(new Action(AtualizarAndar));
 
                     } while (andarAtual < andarObjetivo);
                 }
@@ -42,7 +42,7 @@ namespace T2_Elevador
                     {
                         tempoMovimento();
                         --andarAtual;
-                        Parallel.Invoke(new Action(AtualizarAndar));
+                        //Parallel.Invoke(new Action(AtualizarAndar));
 
                     } while (andarAtual > andarObjetivo);
                 }
